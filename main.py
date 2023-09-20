@@ -17,8 +17,13 @@ def input_upload_summary():
                                        )
     return input_upload_summary
 
+def aa():
+    input_education_level = select("education_level", education_level, name='input_education_level', required=True)
+    for i in range(len(education_level)):
+        if education_level == input_education_level:
+
 def save_upload_summary():
-    img = data['dp']
+    img = input_upload_summary()['summary_upload']
     with open('img.png', 'wb') as file:
         file.write(img['content'])
 
