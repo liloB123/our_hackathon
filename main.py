@@ -12,16 +12,46 @@ def input_upload_summary():
     input_upload_summary = input_group(select("subject", subject, name= 'input_subject', required=True),
     textarea('sub_subject', rows=1, name= 'input_sub_subject', required=True),
     select("education_level", education_level, name= 'input_education_level', required=True),
-    select("subject", grade, name= 'input_class', required=True),
+    select("grade", grade, name= 'input_class', required=True),
     file_upload('summary', placeholder='Choose file', accept='image/*',name= 'summary_upload', required=True)
                                        )
-    return input_subject, input_sub_subject, input_education_level, input_class
-input_subject, input_sub_subject, input_education_level, input_class = input_upload_summary()
+    return input_upload_summary
+
+def save_upload_summary():
+    img = data['dp']
+    with open('img.png', 'wb') as file:
+        file.write(img['content'])
+
+    # display image
+    put_image(img['content'])
+
+    put_file(str(input_upload_summary()['summary_upload']), b'You can put anything here')
+
+    put_image(open('python_logo.png', 'rb').read())
+
+    popup('popup title', 'popup text content')
+
+    session.hold()
+    put_file(input_upload_summary()['summary_upload'], b'hi')
 
 def added_description_list():
     for i in range(len(subject)):
         if input_subject == subject[i]:
             sub_subject[i].append(input_subject)
+
+def search():
+    input_upload_summary = input_group(select("subject", subject, name='input_subject', required=True),
+                                       textarea('sub_subject', rows=1, name='input_sub_subject', required=True),
+                                       select("education_level", education_level, name='input_education_level',
+                                              required=True),
+                                       select("grade", grade, name='input_class', required=True)
+                                       )
+
+    input_search_subject = input('search subject')
+    for i in subject:
+        for letter in i:
+
+
 
 def input_search_summary():
 
