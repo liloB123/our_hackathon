@@ -29,3 +29,4 @@ BACKGROUND_COLOR = "#809bce"
 
 Add_file_image = "addFile.png"
 
+log_in_image = 'sign_in.png'
