@@ -1,3 +1,6 @@
+SCREEN_HEIGHT = 300
+SCREEN_WIDTH = 300
+
 BASIC_SUBJECTS = 'לשון תנ"ך אזרחות ספרות היסטוריה מתמטיקה אנגלית'
 BASIC_SUBJECTS_LIST = BASIC_SUBJECTS.split(' ')
 
