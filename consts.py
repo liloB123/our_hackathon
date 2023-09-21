@@ -1,3 +1,6 @@
+SCREEN_HEIGHT = 300
+SCREEN_WIDTH = 300
+
 BASIC_SUBJECTS = 'לשון תנ"ך אזרחות ספרות היסטוריה מתמטיקה אנגלית'
 BASIC_SUBJECTS_LIST = BASIC_SUBJECTS.split(' ')
 
@@ -21,3 +24,5 @@ DESCRIPTION_LIST = []
 
 NUM_STARS = 5
 
+LAYOUT_SIZE ="500x300"
+BACKGROUND_COLOR = "#809bce"
