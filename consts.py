@@ -26,6 +26,7 @@ NUM_STARS = 5
 
 LAYOUT_SIZE ="1920x1080"
 BACKGROUND_COLOR = "#809bce"
+LOGO = "logo.jpg"
 
 Add_file_image = "addFile.png"
 
