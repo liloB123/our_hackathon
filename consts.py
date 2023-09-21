@@ -24,5 +24,8 @@ DESCRIPTION_LIST = []
 
 NUM_STARS = 5
 
-LAYOUT_SIZE ="500x300"
+LAYOUT_SIZE ="1920x1080"
 BACKGROUND_COLOR = "#809bce"
+
+Add_file_image = "addFile.png"
+

@@ -1,25 +1,34 @@
-import tkinter as tk
 
-#creating screen
-root = tk.Tk()
-root.mainloop()
+from tkinter import *
+import consts
 
-#Adjust size
-root.geometry("500x300")
+#make window and bg color
+tkWindow = Tk()
+tkWindow.geometry(consts.LAYOUT_SIZE)
+tkWindow.configure(bg = consts.BACKGROUND_COLOR)
 
-# Add image file
-#bg = PhotoImage(file = "")
+#make add file button
+def clicked_add_file():
+    text.config(text="You should be able to upload a file now... lol.")
 
-gui = tk.Tk(className='Python Examples - Window Color')
-gui.configure(bg='blue')
+click_btn= PhotoImage(file='addFile.png')
 
-# Show image using label
-#label1 = Label( root, image = )
-#label1.place(x = 0, y = 0)
 
-label2 = tk.Label(root, text = "Welcome")
-label2.pack(pady = 50)
+label_add_file= Label(image=click_btn)
 
-# Create Frame
-frame1 = tk.Frame(root)
-frame1.pack(pady = 20 )
+button = Button(tkWindow, image=click_btn, command= clicked_add_file,borderwidth=-1)
+button.pack(pady=0)
+button.place(x=80, y=150)
+
+text = Label(tkWindow, text= "")
+text.pack(pady=0)
+
+#making the image for the background button of format
+
+bg_format = PhotoImage(file = "page_fill_bg_format.png")
+img_label_bg_format = Label(image = bg_format,).place(x = 700 , y = 150)
+
+#buttons for
+
+tkWindow.mainloop()
+
